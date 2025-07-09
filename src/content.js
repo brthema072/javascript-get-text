@@ -1,3 +1,5 @@
+console.log('olá')
+
 document.addEventListener('click', function (event) {
   const elementoClicado = event.target
 
