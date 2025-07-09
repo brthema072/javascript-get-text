@@ -1,7 +1,12 @@
-document.addEventListener('click', function (event) {
-  const elementoClicado = event.target
+let hoveredElement = null
 
-  const texto = elementoClicado.innerText || elementoClicado.textContent
+document.addEventListener('mouseover', (event) => {
+  hoveredElement = event.target
+})
 
-  console.log(texto)
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'getHoveredText') {
+    const text = hoveredElement?.innerText || hoveredElement?.textContent || ''
+    sendResponse({ text: text.trim() })
+  }
 })
