@@ -16,7 +16,7 @@ Extensão que extrai texto da aba atual usando o DOM ou OCR.
 4. Clique em **Carregar sem compactação** e selecione a pasta do projeto.
 
 ## 📁 Estrutura
-
+```
 get-text/
 ├── icons/
 │ ├── icon16.png
@@ -28,7 +28,7 @@ get-text/
 │ └── popup.html
 ├── manifest.json
 └── README.md
-
+```
 
 ## 📄 Manifest.json
 
